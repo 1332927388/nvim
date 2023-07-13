@@ -158,14 +158,15 @@ return {
     end
 
     local dp = require("dap")
+    local prog = function ()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end
     dp.adapters.gdb = {
       type = 'executable',
       command = '/usr/bin/gdb',
       name = 'gdb'
     }
-    local prog = function ()
-      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-    end
+
     local xarg = function ()
       return {vim.fn.input('args for executable: ')}
     end
