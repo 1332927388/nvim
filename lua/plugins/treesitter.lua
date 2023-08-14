@@ -1,15 +1,16 @@
 return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
 
+  -- require("nvim-treesitter.install").prefer_git = true,
   -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
+      prefer_git = true,
       ensure_installed = {
         "bash",
         "json",
         "lua",
-        "regex",
         "vim",
         "yaml",
         "c",
@@ -29,7 +30,11 @@ return {
         "c",
         "cpp",
         "cmake",
+        "ninja",
+        "python",
+        "rst",
+        "toml",
       })
     end,
   },
-} 
+}
