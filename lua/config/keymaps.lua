@@ -16,6 +16,9 @@ keymap.set("n", "<leader>k", "$")
 keymap.set("n", "<leader>dd", "<cmd>bdelete<cr>", {desc = "Delete buffer"})
 keymap.set("n", "<C-t>", "<cmd>wa<cr><cmd>FloatermToggle<cr>", {desc = "floaterm toggle"})
 keymap.set("t", "<C-t>", "<cmd>FloatermToggle<cr>", {desc = "floaterm toggle"})
+
+keymap.set("v", "<leader>cc", require('osc52').copy_visual)
+
 -- keymap.set("n", "<leader>d", "<cmd>BufferLineCloseLeft<cr>", {desc = "Delete buffer"})
 --
 --
