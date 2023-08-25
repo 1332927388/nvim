@@ -5,7 +5,18 @@ return {
   -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
     opts = {
+      context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+        config = {
+          c = "// %s",
+          cpp = "// %s",
+        },
+      },
       prefer_git = true,
       ensure_installed = {
         "bash",
