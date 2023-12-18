@@ -98,7 +98,7 @@ return {
       servers = {
         clangd = {},
         -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
+        -- pyright = {},
       },
     },
   },
@@ -150,17 +150,12 @@ return {
     opts = {
       ensure_installed = {
         "bash",
-        "html",
-        "javascript",
         "json",
         "lua",
-        "markdown",
-        "markdown_inline",
         "python",
         "query",
         "regex",
         "tsx",
-        "typescript",
         "vim",
         "yaml",
         "c",
@@ -220,7 +215,6 @@ return {
         "stylua",
         "shellcheck",
         "shfmt",
-        "flake8",
       },
     },
   },

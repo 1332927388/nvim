@@ -1,4 +1,6 @@
 return {
   "JoosepAlviste/nvim-ts-context-commentstring",
-  lazy = true
+  lazy = true,
+  cofig = function ()
+  end
 }

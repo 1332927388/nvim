@@ -8,26 +8,45 @@ return {
     dependencies = {
       "JoosepAlviste/nvim-ts-context-commentstring",
     },
-    opts = {
-      context_commentstring = {
-        enable = true,
+    config = function()
+      require('ts_context_commentstring').setup({
         enable_autocmd = false,
-        config = {
+        languages = {
           c = "// %s",
           cpp = "// %s",
         },
-      },
-      prefer_git = true,
-      ensure_installed = {
-        "bash",
-        "json",
-        "lua",
-        "vim",
-        "yaml",
-        "c",
-        "cpp",
-      },
-    },
+        config = {
+
+        },
+        commentary_integration = {
+
+        },
+      })
+    end
+    -- "nvim-treesitter/nvim-treesitter",
+    -- dependencies = {
+    --   "JoosepAlviste/nvim-ts-context-commentstring",
+    -- },
+    -- opts = {
+    --   context_commentstring = {
+    --     enable = true,
+    --     enable_autocmd = false,
+    --     config = {
+    --       c = "// %s",
+    --       cpp = "// %s",
+    --     },
+    --   },
+    --   prefer_git = true,
+    --   ensure_installed = {
+    --     "bash",
+    --     "json",
+    --     "lua",
+    --     "vim",
+    --     "yaml",
+    --     "c",
+    --     "cpp",
+    --   },
+    -- },
   },
 
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
